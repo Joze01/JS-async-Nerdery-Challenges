@@ -43,16 +43,13 @@ function solution() {
           if (err) {
             failureResults.push(err.message);
           } else {
-            successResults.push(`User: ${result.name}, ID: ${result.id}`);
+            successResults.push(`id: ${result.id}\nname: ${result.name}\n`);
           }
       
-          // After the last iteration, print the results
           if (successResults.length + failureResults.length === usernames.length) {
-            // Log success results
             console.log("Success Results:");
             successResults.forEach(result => console.log(result));
       
-            // Log failure results
             console.log("\nFailure Results:");
             failureResults.forEach(result => console.log(result));
           }
